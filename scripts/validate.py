@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """Validate schema, source capture coverage, overlays, and real semantic distinctions."""
 import json
-from pathlib import Path
 import re
 import jsonschema
-from highlighting import ROOT, REFERENCE, THEME, SYNTAX, USER_RULES, resolve, semantic_style, highlighted
+from validation_helpers import ROOT, REFERENCE, THEME, SYNTAX, USER_RULES, resolve, semantic_style, parse_source
 
 
 def luminance(color):
@@ -56,9 +55,8 @@ def main():
         semantic_report[name] = {"tokens": len(report["tokens"]), "types": sorted({t['type'] for t in report['tokens']})}
         for required in ("property", "typeParameter") if name != "panel.tsx" else ("property", "parameter"):
             assert required in semantic_report[name]["types"], (name, required)
-        source = (ROOT / report["file"]).read_text()
-        _, errors = highlighted(source, lang, path)
-        assert not errors, name
+        tree = parse_source((ROOT / report["file"]).read_bytes(), lang)
+        assert not tree.root_node.has_error, name
     # Functional distinctions: imported types, parameters, fields, variants, mutability.
     rust = json.loads((ROOT / ".cache/tokens-lib.rs.json").read_text())["tokens"]
     def find(kind, text=None, modifier=None):
@@ -69,9 +67,10 @@ def main():
     assert semantic_style(find("variable", "count", "mutable"), "rust")["font_style"] == "italic"
     assert semantic_style(find("keyword", "unsafe"), "rust")["color"] == SYNTAX["keyword.unsafe"]["color"]
     assert all(style.get("font_weight", 400) == 400 for style in SYNTAX.values()), "All syntax must use regular weight"
-    for file, lang in [("config.json", "json"), ("config.yml", "yaml"), ("guide.md", "markdown")]:
-        _, errors = highlighted((ROOT / "examples" / file).read_text(), lang)
-        assert not errors, file
+    for file, lang in [("config.json", "json"), ("config.yml", "yaml"), ("guide.md", "markdown"),
+                       ("config.toml", "toml"), ("main.tf", "terraform"), ("start.sh", "bash")]:
+        tree = parse_source((ROOT / "examples" / file).read_bytes(), lang)
+        assert not tree.root_node.has_error, file
     report = {"schema": "pass", "syntax_styles": len(SYNTAX), "semantic_rules": len(USER_RULES),
               "capture_coverage": capture_report, "minimum_contrast": contrast_report, "semantic_tokens": semantic_report}
     dest = ROOT / "validation/report.json"

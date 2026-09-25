@@ -7,4 +7,4 @@
 - 117 syntax styles and 33 optional semantic-highlighting rules.
 - Detailed Rust, Python, TypeScript, and TSX highlighting, plus supporting file formats.
 - Matching ANSI terminal colors, editor states, and diagnostic colors.
-- Example files, interactive previews, screenshots, and validation tools.
+- Example files and validation tools.
