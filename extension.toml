@@ -1,0 +1,8 @@
+id = "glacier-theme"
+name = "Glacier Theme"
+version = "0.1.0"
+schema_version = 1
+authors = ["Max Malkin"]
+description = "A blue-gray dark theme with vibrant, regular-weight syntax colors for Rust, Python, and TypeScript."
+repository = "https://github.com/maxmalkin/zed-glacier-theme"
+themes = ["themes/glacier.json"]

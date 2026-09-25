@@ -1,0 +1,20 @@
+# Keys, scalars, aliases, tags, and multiline strings.
+defaults: &defaults
+  enabled: true
+  retries: 3
+  timeout: 1.5
+  owner: null
+
+services:
+  api:
+    <<: *defaults
+    port: 8080
+    label: "api\nprimary"
+    code: !!str 00123
+    tags: [public, monitored]
+    script: |
+      echo "starting service"
+      exec ./server
+  worker:
+    <<: *defaults
+    enabled: false

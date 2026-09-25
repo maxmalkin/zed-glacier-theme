@@ -1,0 +1,10 @@
+# TOML keys, tables, arrays, and dates.
+name = "glacier"
+enabled = true
+capacity = 128
+updated = 2026-09-25
+
+[service]
+host = "127.0.0.1"
+port = 8080
+tags = ["api", "development"]

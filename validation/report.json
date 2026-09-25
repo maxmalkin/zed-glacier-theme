@@ -1,0 +1,446 @@
+{
+  "schema": "pass",
+  "syntax_styles": 117,
+  "semantic_rules": 33,
+  "capture_coverage": {
+    "bash": {
+      "count": 17,
+      "captures": [
+        "comment",
+        "constant",
+        "embedded",
+        "function",
+        "keyword",
+        "keyword.control",
+        "keyword.directive",
+        "keyword.operator",
+        "number",
+        "operator",
+        "punctuation.bracket",
+        "punctuation.delimiter",
+        "punctuation.special",
+        "string",
+        "string.regex",
+        "variable",
+        "variable.special"
+      ]
+    },
+    "docker-compose": {
+      "count": 11,
+      "captures": [
+        "boolean",
+        "comment",
+        "constant.builtin",
+        "number",
+        "property",
+        "punctuation.bracket",
+        "punctuation.delimiter",
+        "punctuation.special",
+        "string",
+        "string.escape",
+        "type"
+      ]
+    },
+    "dockerfile": {
+      "count": 7,
+      "captures": [
+        "comment",
+        "constant",
+        "keyword",
+        "none",
+        "operator",
+        "punctuation.special",
+        "string"
+      ]
+    },
+    "hcl": {
+      "count": 14,
+      "captures": [
+        "boolean",
+        "comment",
+        "constant",
+        "function",
+        "keyword",
+        "number",
+        "operator",
+        "punctuation",
+        "punctuation.bracket",
+        "punctuation.delimiter",
+        "punctuation.special",
+        "string",
+        "type",
+        "variable"
+      ]
+    },
+    "json": {
+      "count": 9,
+      "captures": [
+        "boolean",
+        "comment",
+        "constant.builtin",
+        "number",
+        "property.json_key",
+        "punctuation.bracket",
+        "punctuation.delimiter",
+        "string",
+        "string.escape"
+      ]
+    },
+    "markdown-inline": {
+      "count": 6,
+      "captures": [
+        "emphasis.markup",
+        "emphasis.strong.markup",
+        "link_text.markup",
+        "link_uri.markup",
+        "strikethrough.markup",
+        "text.literal.markup"
+      ]
+    },
+    "markdown": {
+      "count": 7,
+      "captures": [
+        "link_text.markup",
+        "link_uri.markup",
+        "punctuation.embedded.markup",
+        "punctuation.list_marker.markup",
+        "punctuation.markup",
+        "text",
+        "title.markup"
+      ]
+    },
+    "python": {
+      "count": 37,
+      "captures": [
+        "attribute.builtin",
+        "attribute.special",
+        "boolean",
+        "comment",
+        "constant",
+        "constant.builtin",
+        "embedded",
+        "function.builtin",
+        "function.call",
+        "function.decorator",
+        "function.decorator.call",
+        "function.definition",
+        "function.kwargs",
+        "function.method.call",
+        "function.method.constructor",
+        "keyword",
+        "keyword.definition",
+        "keyword.operator",
+        "number",
+        "operator",
+        "property",
+        "punctuation.bracket",
+        "punctuation.delimiter",
+        "punctuation.special",
+        "string",
+        "string.doc",
+        "string.escape",
+        "type",
+        "type.builtin",
+        "type.class",
+        "type.class.builtin",
+        "type.class.call",
+        "type.class.definition",
+        "type.class.inheritance",
+        "variable",
+        "variable.parameter",
+        "variable.special"
+      ]
+    },
+    "rust": {
+      "count": 28,
+      "captures": [
+        "attribute",
+        "boolean",
+        "comment",
+        "comment.doc",
+        "constant",
+        "function",
+        "function.definition",
+        "function.method",
+        "function.special",
+        "function.special.definition",
+        "keyword",
+        "keyword.control",
+        "lifetime",
+        "none",
+        "number",
+        "operator",
+        "property",
+        "punctuation.bracket",
+        "punctuation.delimiter",
+        "punctuation.special",
+        "string",
+        "string.escape",
+        "type",
+        "type.builtin",
+        "type.interface",
+        "variable",
+        "variable.parameter",
+        "variable.special"
+      ]
+    },
+    "sql": {
+      "count": 16,
+      "captures": [
+        "boolean",
+        "comment",
+        "constant.builtin",
+        "function.call",
+        "keyword",
+        "keyword.operator",
+        "number",
+        "operator",
+        "parameter",
+        "property",
+        "punctuation.bracket",
+        "punctuation.delimiter",
+        "string",
+        "type",
+        "type.builtin",
+        "variable"
+      ]
+    },
+    "terraform-vars": {
+      "count": 14,
+      "captures": [
+        "boolean",
+        "comment",
+        "constant",
+        "function",
+        "keyword",
+        "number",
+        "operator",
+        "punctuation",
+        "punctuation.bracket",
+        "punctuation.delimiter",
+        "punctuation.special",
+        "string",
+        "type",
+        "variable"
+      ]
+    },
+    "terraform": {
+      "count": 14,
+      "captures": [
+        "boolean",
+        "comment",
+        "constant",
+        "function",
+        "keyword",
+        "number",
+        "operator",
+        "punctuation",
+        "punctuation.bracket",
+        "punctuation.delimiter",
+        "punctuation.special",
+        "string",
+        "type",
+        "variable"
+      ]
+    },
+    "toml": {
+      "count": 10,
+      "captures": [
+        "comment",
+        "constant",
+        "number",
+        "operator",
+        "property",
+        "punctuation.bracket",
+        "punctuation.delimiter",
+        "string",
+        "string.escape",
+        "string.special"
+      ]
+    },
+    "tsx": {
+      "count": 35,
+      "captures": [
+        "attribute.jsx",
+        "boolean",
+        "comment",
+        "constant",
+        "constant.builtin",
+        "constructor",
+        "embedded",
+        "function",
+        "function.method",
+        "keyword",
+        "keyword.control",
+        "keyword.declaration",
+        "keyword.import",
+        "keyword.operator.regex",
+        "number",
+        "operator",
+        "property",
+        "punctuation.bracket",
+        "punctuation.bracket.jsx",
+        "punctuation.delimiter",
+        "punctuation.delimiter.jsx",
+        "punctuation.special",
+        "string",
+        "string.escape",
+        "string.regex",
+        "string.special",
+        "tag.component.jsx",
+        "tag.jsx",
+        "text.jsx",
+        "type",
+        "type.builtin",
+        "type.class",
+        "variable",
+        "variable.parameter",
+        "variable.special"
+      ]
+    },
+    "typescript": {
+      "count": 31,
+      "captures": [
+        "boolean",
+        "comment",
+        "constant",
+        "constant.builtin",
+        "constructor",
+        "embedded",
+        "function",
+        "function.method",
+        "keyword",
+        "keyword.control",
+        "keyword.declaration",
+        "keyword.import",
+        "keyword.operator.regex",
+        "nested",
+        "number",
+        "operator",
+        "property",
+        "property.name",
+        "punctuation.bracket",
+        "punctuation.delimiter",
+        "punctuation.special",
+        "string",
+        "string.escape",
+        "string.regex",
+        "type",
+        "type.builtin",
+        "type.class",
+        "type.name",
+        "variable",
+        "variable.parameter",
+        "variable.special"
+      ]
+    },
+    "yaml": {
+      "count": 11,
+      "captures": [
+        "boolean",
+        "comment",
+        "constant.builtin",
+        "number",
+        "property",
+        "punctuation.bracket",
+        "punctuation.delimiter",
+        "punctuation.special",
+        "string",
+        "string.escape",
+        "type"
+      ]
+    }
+  },
+  "minimum_contrast": {
+    "editor.background": 4.59,
+    "editor.active_line.background": 4.88,
+    "elevated_surface.background": 4.81,
+    "editor.document_highlight.read_background": 4.84,
+    "editor.document_highlight.write_background": 4.88,
+    "editor.document_highlight.bracket_background": 4.84,
+    "search.match_background": 4.84,
+    "search.active_match_background": 4.74,
+    "version_control.word_added": 4.84,
+    "version_control.word_deleted": 5.02,
+    "selection": 5.82
+  },
+  "semantic_tokens": {
+    "lib.rs": {
+      "tokens": 198,
+      "types": [
+        "attributeBracket",
+        "boolean",
+        "builtinType",
+        "comment",
+        "const",
+        "decorator",
+        "derive",
+        "enum",
+        "enumMember",
+        "escapeSequence",
+        "formatSpecifier",
+        "function",
+        "interface",
+        "keyword",
+        "lifetime",
+        "macro",
+        "method",
+        "namespace",
+        "number",
+        "operator",
+        "parameter",
+        "property",
+        "selfKeyword",
+        "selfTypeKeyword",
+        "string",
+        "struct",
+        "typeParameter",
+        "variable"
+      ]
+    },
+    "cache.py": {
+      "tokens": 108,
+      "types": [
+        "class",
+        "clsParameter",
+        "decorator",
+        "function",
+        "method",
+        "namespace",
+        "parameter",
+        "property",
+        "selfParameter",
+        "typeParameter",
+        "variable"
+      ]
+    },
+    "cache.ts": {
+      "tokens": 78,
+      "types": [
+        "class",
+        "enum",
+        "enumMember",
+        "interface",
+        "method",
+        "parameter",
+        "property",
+        "type",
+        "typeParameter",
+        "variable"
+      ]
+    },
+    "panel.tsx": {
+      "tokens": 22,
+      "types": [
+        "enum",
+        "enumMember",
+        "function",
+        "interface",
+        "method",
+        "parameter",
+        "property",
+        "variable"
+      ]
+    }
+  }
+}

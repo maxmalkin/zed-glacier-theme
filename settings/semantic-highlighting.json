@@ -1,0 +1,269 @@
+{
+  "languages": {
+    "Rust": {
+      "semantic_tokens": "combined"
+    },
+    "Python": {
+      "semantic_tokens": "combined"
+    },
+    "TypeScript": {
+      "semantic_tokens": "combined"
+    },
+    "TSX": {
+      "semantic_tokens": "combined"
+    }
+  },
+  "global_lsp_settings": {
+    "semantic_token_rules": [
+      {
+        "token_modifiers": [
+          "deprecated"
+        ],
+        "strikethrough": true
+      },
+      {
+        "token_type": "keyword",
+        "token_modifiers": [
+          "unsafe"
+        ],
+        "style": [
+          "keyword.unsafe"
+        ]
+      },
+      {
+        "token_type": "function",
+        "token_modifiers": [
+          "unsafe"
+        ],
+        "style": [
+          "keyword.unsafe"
+        ]
+      },
+      {
+        "token_type": "method",
+        "token_modifiers": [
+          "unsafe"
+        ],
+        "style": [
+          "keyword.unsafe"
+        ]
+      },
+      {
+        "token_type": "operator",
+        "token_modifiers": [
+          "unsafe"
+        ],
+        "style": [
+          "keyword.unsafe"
+        ]
+      },
+      {
+        "token_type": "punctuation",
+        "token_modifiers": [
+          "unsafe"
+        ],
+        "style": [
+          "keyword.unsafe"
+        ]
+      },
+      {
+        "token_type": "keyword",
+        "token_modifiers": [
+          "controlFlow"
+        ],
+        "style": [
+          "keyword.control"
+        ]
+      },
+      {
+        "token_type": "generic",
+        "token_modifiers": [
+          "attribute"
+        ],
+        "style": [
+          "attribute"
+        ]
+      },
+      {
+        "token_type": "variable",
+        "token_modifiers": [
+          "mutable"
+        ],
+        "style": [
+          "variable.mutable"
+        ]
+      },
+      {
+        "token_type": "parameter",
+        "token_modifiers": [
+          "mutable"
+        ],
+        "style": [
+          "variable.parameter.mutable"
+        ]
+      },
+      {
+        "token_type": "property",
+        "token_modifiers": [
+          "mutable"
+        ],
+        "style": [
+          "property.mutable"
+        ]
+      },
+      {
+        "token_type": "property",
+        "token_modifiers": [
+          "readonly"
+        ],
+        "style": [
+          "property.readonly"
+        ]
+      },
+      {
+        "token_type": "variable",
+        "token_modifiers": [
+          "readonly"
+        ],
+        "style": [
+          "constant"
+        ]
+      },
+      {
+        "token_type": "variable",
+        "token_modifiers": [
+          "constant"
+        ],
+        "style": [
+          "constant"
+        ]
+      },
+      {
+        "token_type": "function",
+        "token_modifiers": [
+          "declaration"
+        ],
+        "style": [
+          "function.definition"
+        ]
+      },
+      {
+        "token_type": "function",
+        "token_modifiers": [
+          "definition"
+        ],
+        "style": [
+          "function.definition"
+        ]
+      },
+      {
+        "token_type": "method",
+        "token_modifiers": [
+          "declaration"
+        ],
+        "style": [
+          "function.method.definition"
+        ]
+      },
+      {
+        "token_type": "method",
+        "token_modifiers": [
+          "definition"
+        ],
+        "style": [
+          "function.method.definition"
+        ]
+      },
+      {
+        "token_type": "builtinType",
+        "style": [
+          "type.builtin"
+        ]
+      },
+      {
+        "token_type": "selfTypeKeyword",
+        "style": [
+          "type.self"
+        ]
+      },
+      {
+        "token_type": "typeAlias",
+        "style": [
+          "type.alias"
+        ]
+      },
+      {
+        "token_type": "procMacro",
+        "style": [
+          "function.macro"
+        ]
+      },
+      {
+        "token_type": "macroBang",
+        "style": [
+          "function.macro"
+        ]
+      },
+      {
+        "token_type": "arithmetic",
+        "style": [
+          "operator"
+        ]
+      },
+      {
+        "token_type": "constParameter",
+        "style": [
+          "type.parameter"
+        ]
+      },
+      {
+        "token_type": "character",
+        "style": [
+          "string"
+        ]
+      },
+      {
+        "token_type": "escapeSequence",
+        "style": [
+          "string.escape"
+        ]
+      },
+      {
+        "token_type": "formatSpecifier",
+        "style": [
+          "string.special"
+        ]
+      },
+      {
+        "token_type": "lifetime",
+        "style": [
+          "lifetime"
+        ]
+      },
+      {
+        "token_type": "label",
+        "style": [
+          "label"
+        ]
+      },
+      {
+        "token_type": "selfKeyword",
+        "style": [
+          "variable.special"
+        ]
+      },
+      {
+        "token_type": "selfParameter",
+        "style": [
+          "variable.special"
+        ]
+      },
+      {
+        "token_type": "clsParameter",
+        "style": [
+          "variable.special"
+        ]
+      }
+    ]
+  }
+}

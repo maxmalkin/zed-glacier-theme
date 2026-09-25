@@ -1,0 +1,8 @@
+{
+  "name": "glacier",
+  "enabled": true,
+  "capacity": 128,
+  "fallback": null,
+  "services": ["api", "worker"],
+  "message": "ready\nwaiting"
+}

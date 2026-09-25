@@ -1,0 +1,28 @@
+name: Validate theme
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - name: Install validation dependency
+        run: python -m pip install jsonschema==4.26.0
+      - name: Rebuild generated files
+        run: python scripts/build.py
+      - name: Check generated files are current
+        run: git diff --exit-code -- themes/ settings/ palette.json
+      - name: Validate extension package and contrast
+        run: python scripts/check_package.py

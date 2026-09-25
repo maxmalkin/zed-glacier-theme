@@ -1,0 +1,25 @@
+{
+  "zed_revision": "e91b82c106817f2419207ebf81f1da766698ac95",
+  "schema_source": "https://zed.dev/schema/themes/v0.2.0.json",
+  "references": {
+    "rust.scm": "https://raw.githubusercontent.com/zed-industries/zed/e91b82c106817f2419207ebf81f1da766698ac95/crates/grammars/src/rust/highlights.scm",
+    "python.scm": "https://raw.githubusercontent.com/zed-industries/zed/e91b82c106817f2419207ebf81f1da766698ac95/crates/grammars/src/python/highlights.scm",
+    "typescript.scm": "https://raw.githubusercontent.com/zed-industries/zed/e91b82c106817f2419207ebf81f1da766698ac95/crates/grammars/src/typescript/highlights.scm",
+    "tsx.scm": "https://raw.githubusercontent.com/zed-industries/zed/e91b82c106817f2419207ebf81f1da766698ac95/crates/grammars/src/tsx/highlights.scm",
+    "json.scm": "https://raw.githubusercontent.com/zed-industries/zed/e91b82c106817f2419207ebf81f1da766698ac95/crates/grammars/src/json/highlights.scm",
+    "yaml.scm": "https://raw.githubusercontent.com/zed-industries/zed/e91b82c106817f2419207ebf81f1da766698ac95/crates/grammars/src/yaml/highlights.scm",
+    "markdown.scm": "https://raw.githubusercontent.com/zed-industries/zed/e91b82c106817f2419207ebf81f1da766698ac95/crates/grammars/src/markdown/highlights.scm",
+    "markdown-inline.scm": "https://raw.githubusercontent.com/zed-industries/zed/e91b82c106817f2419207ebf81f1da766698ac95/crates/grammars/src/markdown-inline/highlights.scm",
+    "bash.scm": "https://raw.githubusercontent.com/zed-industries/zed/e91b82c106817f2419207ebf81f1da766698ac95/crates/grammars/src/bash/highlights.scm",
+    "rust-semantic.json": "https://raw.githubusercontent.com/zed-industries/zed/e91b82c106817f2419207ebf81f1da766698ac95/crates/grammars/src/rust/semantic_token_rules.json",
+    "python-semantic.json": "https://raw.githubusercontent.com/zed-industries/zed/e91b82c106817f2419207ebf81f1da766698ac95/crates/grammars/src/python/semantic_token_rules.json",
+    "default-semantic.json": "https://raw.githubusercontent.com/zed-industries/zed/e91b82c106817f2419207ebf81f1da766698ac95/assets/settings/default_semantic_token_rules.json",
+    "terraform.scm": "installed Zed extension: terraform/languages/terraform/highlights.scm",
+    "terraform-vars.scm": "installed Zed extension: terraform/languages/terraform-vars/highlights.scm",
+    "hcl.scm": "installed Zed extension: terraform/languages/hcl/highlights.scm",
+    "toml.scm": "installed Zed extension: toml/languages/toml/highlights.scm",
+    "dockerfile.scm": "installed Zed extension: dockerfile/languages/dockerfile/highlights.scm",
+    "docker-compose.scm": "installed Zed extension: dockerfile/languages/docker-compose/highlights.scm",
+    "sql.scm": "installed Zed extension: sql/languages/sql/highlights.scm"
+  }
+}
