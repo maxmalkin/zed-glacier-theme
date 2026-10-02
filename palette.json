@@ -20,5 +20,6 @@
   "operator": "#CFD8E3",
   "error": "#FFA39E",
   "border": "#4B5D70",
-  "muted": "#98A9BA"
+  "muted": "#98A9BA",
+  "modified": "#FFC77A"
 }

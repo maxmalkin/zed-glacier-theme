@@ -13,6 +13,7 @@ P = {
     "attribute": "#F5A0D0", "generic": "#66E0C1", "comment": "#A3AFBC",
     "doc": "#B3C3B5", "punctuation": "#B6C2CE", "operator": "#CFD8E3",
     "error": "#FFA39E", "border": "#4B5D70", "muted": "#98A9BA",
+    "modified": "#FFC77A",
 }
 
 
@@ -33,7 +34,9 @@ def build():
            "terminal.ansi.background", "element.background")
     colors("#2B3A4C", "elevated_surface.background")
     colors("#34465A", "element.hover", "ghost_element.hover")
-    colors("#25384D", "element.active", "element.selected", "ghost_element.active", "ghost_element.selected")
+    colors("#25384D", "element.active", "ghost_element.active", "ghost_element.selected")
+    # The project panel uses element.selected for its active/marked file row.
+    colors("#493B10", "element.selected")
     colors("#00000000", "border.transparent", "ghost_element.background", "ghost_element.disabled",
            "scrollbar.track.background")
     colors("#9FDEFA18", "drop_target.background")
@@ -80,14 +83,14 @@ def build():
         "error": (p["error"], "#433139"), "deleted": (p["error"], "#433139"),
         "warning": (p["function"], "#3B3927"), "conflict": (p["attribute"], "#3A354A"),
         "created": (p["string"], "#253D37"), "success": (p["string"], "#253D37"),
-        "modified": (p["property"], "#253B49"), "renamed": (p["generic"], "#253B49"),
+        "modified": (p["modified"], "#43351E"), "renamed": (p["generic"], "#253B49"),
         "info": (p["type"], "#253B49"), "hint": (p["comment"], p["panel"]),
         "ignored": (p["muted"], p["panel"]), "hidden": (p["muted"], p["panel"]),
         "unreachable": (p["comment"], p["panel"]), "predictive": (p["muted"], p["panel"]),
     }
     for name, (fg, bg) in statuses.items():
         s.update({name: fg, name + ".background": bg, name + ".border": fg + "65"})
-    for name, role in {"added": "string", "deleted": "error", "modified": "property",
+    for name, role in {"added": "string", "deleted": "error", "modified": "modified",
                        "renamed": "generic", "conflict": "attribute", "ignored": "muted"}.items():
         s["version_control." + name] = p[role]
     # Opaque diff fills avoid Zed's faint foreground-derived overlays on blue-gray.

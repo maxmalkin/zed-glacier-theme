@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Darker, more distinct green and red diff lines, borders, and changed-word highlights.
+- Golden sidebar selection and brighter amber modified-file labels and indicators.
 
 ## 0.1.0
 

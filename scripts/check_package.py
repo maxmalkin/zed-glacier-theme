@@ -49,12 +49,19 @@ def main():
     assert all(re.fullmatch(r"#[0-9A-Fa-f]{6}", background) for background in backgrounds), "Contrast checks require opaque backgrounds"
     ratios = [contrast(token["color"], background) for token in syntax.values() for background in backgrounds]
     assert min(ratios) >= 4.5
+    sidebar_ratios = [contrast(style[foreground], style[background])
+                      for foreground in ("text", "text.muted", "icon.muted", "created", "modified",
+                                         "deleted", "renamed", "conflict", "ignored")
+                      for background in ("panel.background", "element.selected")]
+    assert min(sidebar_ratios) >= 4.5, "Sidebar labels must remain readable on selected rows"
+    assert contrast(style["modified"], style["element.hover"]) >= 4.5
     settings = json.loads((ROOT / "settings/semantic-highlighting.json").read_text())
     assert all(settings["languages"][lang]["semantic_tokens"] == "combined" for lang in ["Rust", "Python", "TypeScript", "TSX"])
     for rule in settings["global_lsp_settings"]["semantic_token_rules"]:
         assert all(name in syntax for name in rule.get("style", []))
         assert rule.get("font_weight", "normal") == "normal"
     print(f"PASS: extension manifest, theme schema, semantic settings, regular font weight, and contrast (minimum {min(ratios):.2f}:1)")
+    print(f"PASS: sidebar label contrast (minimum {min(sidebar_ratios):.2f}:1)")
 
 
 if __name__ == "__main__":
