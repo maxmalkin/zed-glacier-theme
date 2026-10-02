@@ -72,11 +72,11 @@
         "panel.indent_guide_hover": "#7C91A7",
         "editor.wrap_guide": "#B6C2CE18",
         "editor.active_wrap_guide": "#EACD4540",
-        "editor.document_highlight.read_background": "#253B49",
-        "editor.document_highlight.write_background": "#3A354A",
-        "editor.document_highlight.bracket_background": "#3B3927",
-        "search.match_background": "#3B3927",
-        "search.active_match_background": "#423921",
+        "editor.document_highlight.read_background": "#173347",
+        "editor.document_highlight.write_background": "#331C49",
+        "editor.document_highlight.bracket_background": "#342800",
+        "search.match_background": "#342800",
+        "search.active_match_background": "#482400",
         "scrollbar.thumb.background": "#98A9BA50",
         "scrollbar.thumb.hover_background": "#98A9BA90",
         "terminal.bright_foreground": "#FFFFFF",
@@ -175,7 +175,7 @@
           {
             "cursor": "#F5D547",
             "background": "#F5D547",
-            "selection": "#192D43"
+            "selection": "#0B1D45"
           },
           {
             "cursor": "#7DDFFF",

@@ -56,10 +56,10 @@ def build():
     colors("#7C91A7", "panel.indent_guide_hover")
     colors("#B6C2CE18", "editor.wrap_guide")
     colors("#EACD4540", "editor.active_wrap_guide")
-    colors("#253B49", "editor.document_highlight.read_background")
-    colors("#3A354A", "editor.document_highlight.write_background")
-    colors("#3B3927", "editor.document_highlight.bracket_background", "search.match_background")
-    colors("#423921", "search.active_match_background")
+    colors("#173347", "editor.document_highlight.read_background")
+    colors("#331C49", "editor.document_highlight.write_background")
+    colors("#342800", "editor.document_highlight.bracket_background", "search.match_background")
+    colors("#482400", "search.active_match_background")
     colors("#98A9BA50", "scrollbar.thumb.background")
     colors("#98A9BA90", "scrollbar.thumb.hover_background")
     colors("#FFFFFF", "terminal.bright_foreground")
@@ -105,7 +105,7 @@ def build():
               "version_control.conflict_marker.theirs": "#253B49"})
     s["accents"] = [p[k] for k in ["function", "type", "keyword", "string", "attribute", "number"]]
     s["players"] = [{"cursor": p[k], "background": p[k], "selection": bg} for k, bg in [
-        ("function", "#192D43"), ("type", "#21384B"), ("attribute", "#3B3044"),
+        ("function", "#0B1D45"), ("type", "#21384B"), ("attribute", "#3B3044"),
         ("string", "#243C34"), ("number", "#413139"), ("keyword", "#323047")]]
 
     syntax = {}

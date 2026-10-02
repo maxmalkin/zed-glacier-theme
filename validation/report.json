@@ -355,18 +355,18 @@
     "editor.background": 4.59,
     "editor.active_line.background": 4.88,
     "elevated_surface.background": 4.81,
-    "editor.document_highlight.read_background": 4.84,
-    "editor.document_highlight.write_background": 4.88,
-    "editor.document_highlight.bracket_background": 4.84,
-    "search.match_background": 4.84,
-    "search.active_match_background": 4.74,
+    "editor.document_highlight.read_background": 5.45,
+    "editor.document_highlight.write_background": 6.21,
+    "editor.document_highlight.bracket_background": 6.02,
+    "search.match_background": 6.02,
+    "search.active_match_background": 5.71,
     "editor.diff_hunk.added.background": 5.34,
     "editor.diff_hunk.added.hollow_background": 5.63,
     "editor.diff_hunk.deleted.background": 5.86,
     "editor.diff_hunk.deleted.hollow_background": 6.1,
     "version_control.word_added": 6.7,
     "version_control.word_deleted": 7.27,
-    "selection": 5.82
+    "selection": 6.83
   },
   "semantic_tokens": {
     "lib.rs": {
