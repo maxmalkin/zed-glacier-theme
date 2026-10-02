@@ -23,7 +23,7 @@ The theme is validated against the official Zed theme schema and audited current
 - Real language-server token responses are mapped using Zed’s layered rule precedence.
 - Parameter/field and enum/variant distinctions, mutable binding italics, and unsafe color are checked against real Rust fixture tokens. All syntax styles are required to use regular font weight.
 - Core fixtures parse, and Rust and TypeScript pass their compilers. Python passes bytecode compilation.
-- Syntax contrast is measured against eleven background states; current minimum values are recorded in `report.json`.
+- Syntax contrast is measured against fifteen background states, including filled and outlined diff lines; current minimum values are recorded in `report.json`.
 - Supporting fixtures and Markdown code injections are checked with their Tree-sitter highlight queries.
 - Zed successfully opened the sample project after activation; recent logs contained no theme or semantic-settings errors.
 

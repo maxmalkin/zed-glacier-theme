@@ -42,8 +42,11 @@ def main():
         "editor.background", "editor.active_line.background", "elevated_surface.background",
         "editor.document_highlight.read_background", "editor.document_highlight.write_background",
         "editor.document_highlight.bracket_background", "search.match_background", "search.active_match_background",
+        "editor.diff_hunk.added.background", "editor.diff_hunk.added.hollow_background",
+        "editor.diff_hunk.deleted.background", "editor.diff_hunk.deleted.hollow_background",
         "version_control.word_added", "version_control.word_deleted")]
     backgrounds.append(style["players"][0]["selection"])
+    assert all(re.fullmatch(r"#[0-9A-Fa-f]{6}", background) for background in backgrounds), "Contrast checks require opaque backgrounds"
     ratios = [contrast(token["color"], background) for token in syntax.values() for background in backgrounds]
     assert min(ratios) >= 4.5
     settings = json.loads((ROOT / "settings/semantic-highlighting.json").read_text())

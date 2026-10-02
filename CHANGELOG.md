@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Darker, more distinct green and red diff lines, borders, and changed-word highlights.
+
 ## 0.1.0
 
 - Initial Glacier theme with blue-gray surfaces and vibrant syntax colors.

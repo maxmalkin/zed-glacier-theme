@@ -90,7 +90,14 @@ def build():
     for name, role in {"added": "string", "deleted": "error", "modified": "property",
                        "renamed": "generic", "conflict": "attribute", "ignored": "muted"}.items():
         s["version_control." + name] = p[role]
-    s.update({"version_control.word_added": "#253D37", "version_control.word_deleted": "#433139",
+    # Opaque diff fills avoid Zed's faint foreground-derived overlays on blue-gray.
+    s.update({"editor.diff_hunk.added.background": "#16382A",
+              "editor.diff_hunk.added.hollow_background": "#19332A",
+              "editor.diff_hunk.added.hollow_border": "#4C805D",
+              "editor.diff_hunk.deleted.background": "#451F2D",
+              "editor.diff_hunk.deleted.hollow_background": "#3B202C",
+              "editor.diff_hunk.deleted.hollow_border": "#92505A",
+              "version_control.word_added": "#082619", "version_control.word_deleted": "#300D1B",
               "version_control.conflict_marker.ours": "#253D37",
               "version_control.conflict_marker.theirs": "#253B49"})
     s["accents"] = [p[k] for k in ["function", "type", "keyword", "string", "attribute", "number"]]

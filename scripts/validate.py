@@ -24,7 +24,9 @@ def main():
     # The hosted schema lags several fields shipped in current Zed; audit these explicitly.
     current = {"editor.hover_line_number", "search.active_match_background"} | {
         "version_control." + key for key in ["added", "deleted", "modified", "renamed", "ignored", "conflict",
-                                            "word_added", "word_deleted", "conflict_marker.ours", "conflict_marker.theirs"]}
+                                            "word_added", "word_deleted", "conflict_marker.ours", "conflict_marker.theirs"]} | {
+        f"editor.diff_hunk.{kind}.{field}" for kind in ("added", "deleted")
+        for field in ("background", "hollow_background", "hollow_border")}
     assert not set(THEME) - set(schema["definitions"]["ThemeStyleContent"]["properties"]) - current
     capture_report = {}
     for path in sorted(REFERENCE.glob("*.scm")):
@@ -39,6 +41,8 @@ def main():
         "editor.background", "editor.active_line.background", "elevated_surface.background",
         "editor.document_highlight.read_background", "editor.document_highlight.write_background",
         "editor.document_highlight.bracket_background", "search.match_background", "search.active_match_background",
+        "editor.diff_hunk.added.background", "editor.diff_hunk.added.hollow_background",
+        "editor.diff_hunk.deleted.background", "editor.diff_hunk.deleted.hollow_background",
         "version_control.word_added", "version_control.word_deleted"]}
     backgrounds["selection"] = THEME["players"][0]["selection"]
     contrast_report = {}
