@@ -13,7 +13,7 @@ P = {
     "attribute": "#F5A0D0", "generic": "#66E0C1", "comment": "#A3AFBC",
     "doc": "#B3C3B5", "punctuation": "#B6C2CE", "operator": "#CFD8E3",
     "error": "#FFA39E", "border": "#4B5D70", "muted": "#98A9BA",
-    "modified": "#FFC77A",
+    "modified": "#FFC77A", "ignored": "#8192A4",
 }
 
 
@@ -85,13 +85,13 @@ def build():
         "created": (p["string"], "#253D37"), "success": (p["string"], "#253D37"),
         "modified": (p["modified"], "#43351E"), "renamed": (p["generic"], "#253B49"),
         "info": (p["type"], "#253B49"), "hint": (p["comment"], p["panel"]),
-        "ignored": (p["muted"], p["panel"]), "hidden": (p["muted"], p["panel"]),
+        "ignored": (p["ignored"], p["panel"]), "hidden": (p["muted"], p["panel"]),
         "unreachable": (p["comment"], p["panel"]), "predictive": (p["muted"], p["panel"]),
     }
     for name, (fg, bg) in statuses.items():
         s.update({name: fg, name + ".background": bg, name + ".border": fg + "65"})
     for name, role in {"added": "string", "deleted": "error", "modified": "modified",
-                       "renamed": "generic", "conflict": "attribute", "ignored": "muted"}.items():
+                       "renamed": "generic", "conflict": "attribute", "ignored": "ignored"}.items():
         s["version_control." + name] = p[role]
     # Opaque diff fills avoid Zed's faint foreground-derived overlays on blue-gray.
     s.update({"editor.diff_hunk.added.background": "#16382A",

@@ -21,5 +21,6 @@
   "error": "#FFA39E",
   "border": "#4B5D70",
   "muted": "#98A9BA",
-  "modified": "#FFC77A"
+  "modified": "#FFC77A",
+  "ignored": "#8192A4"
 }

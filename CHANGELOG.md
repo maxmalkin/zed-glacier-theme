@@ -4,6 +4,7 @@
 
 - Darker, more distinct green and red diff lines, borders, and changed-word highlights.
 - Golden sidebar selection and brighter amber modified-file labels and indicators.
+- Dimmer gitignored files in the sidebar, still readable on every row state.
 - Stronger text selections, search matches, and matching-symbol highlights.
 
 ## 0.1.0

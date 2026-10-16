@@ -50,6 +50,10 @@ def main():
         ratios = {scope: contrast(style["color"], background) for scope, style in SYNTAX.items()}
         assert min(ratios.values()) >= 4.5, (name, min(ratios.items(), key=lambda p: p[1]))
         contrast_report[name] = round(min(ratios.values()), 2)
+    # Gitignored sidebar files must read as dimmer than normal files yet stay legible on every row state.
+    assert contrast(THEME["text.muted"], THEME["ignored"]) >= 1.4
+    for key in ["panel.background", "ghost_element.hover", "ghost_element.selected", "element.selected"]:
+        assert contrast(THEME["ignored"], THEME[key]) >= 3, key
     semantic_report = {}
     for name, lang in [("lib.rs", "rust"), ("cache.py", "python"), ("cache.ts", "typescript"), ("panel.tsx", "tsx")]:
         path = ROOT / ".cache" / f"tokens-{name}.json"
